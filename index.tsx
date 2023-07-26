@@ -39,11 +39,11 @@ export const RandomNumberGenerator = ({
   return (
     <div>
       <h1>Random Number Generator</h1>
-      <div className="flex flex-col max-w-[280px] mx-auto ">
-        <span className="text-center text-7xl sm:text-8xl md:text-9xl py-20">
+      <div className="flex flex-col sm:flex-row items-center justify-around mx-auto ">
+        <span className="text-center text-7xl sm:text-8xl md:text-9xl py-10 sm:py-20">
           {typeof randomNumber === "string" ? randomNumber : currentNumber}
         </span>
-        <div className="flex justify-between gap-8">
+        <div className="flex flex-col justify-between gap-8">
           <div className="flex flex-col">
             <label
               className="block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2"
@@ -79,7 +79,7 @@ export const RandomNumberGenerator = ({
         </div>
       </div>
       <button
-        className="w-full px-4 py-2 mt-4 text-white bg-blue-500 rounded-md hover:bg-blue-600 outline-none border-none hover:cursor-pointer
+        className="w-full text-xl px-4 py-3 mt-4 text-white uppercase bg-blue-500 rounded-md hover:bg-blue-600 outline-none border-none hover:cursor-pointer
           disabled:opacity-50 disabled:cursor-not-allowed disabled:hover:bg-blue-500 disabled:hover:cursor-not-allowed
         "
         onClick={() => setRandomNumber(generateRandomNumber(min, max))}
